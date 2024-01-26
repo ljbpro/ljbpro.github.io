@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <script>
+        function getAccessToken(){
+            PortalAPP.GetAccessToken();
+        }
+
+        function portalAppGetAccessTokenCallBack(result){
+            alert(result);
+        }
+
+        function getPersonalBasicInfo(){
+            PortalAPP.GetPersonalBasicInfo("TESTAPP001-0001","大村市アプリ");
+        }
+
+        function portalAppGetPersonalBasicInfoCallBack(result){
+            alert(result);
+        }
+    </script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h1>TEST</h1>
+
+<button onclick="getAccessToken()">GetAccessToken</button>
+<button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button>
+
 </body>
 </html>
