@@ -25,6 +25,14 @@
         function mkTurnOnCamera(){
             alert("mkTurnOnCamera Function Called");
         }
+
+        function portalAppViewLaunch(param){
+            PortalAPP.Launch(param);
+        }
+
+        function portalAppLaunchCallBack(result){
+            alert(result);
+        }
     </script>
 </head>
 <body>
@@ -32,6 +40,7 @@
 
 <button onclick="getAccessToken()">GetAccessToken</button>
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button>
+<button onclick="portalAppViewLaunch('{"PortalAppLink":{"CustomerURL":"mebukuapp://mebukuapp-host/home"}}')">ホーム画面</button>
 
 </body>
 </html>
