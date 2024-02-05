@@ -26,7 +26,8 @@
             alert("mkTurnOnCamera Function Called");
         }
 
-        function portalAppViewLaunch(param){
+        function portalAppViewLaunch(){
+            const param = {"PortalAppLink":{"CustomerURL":"mebukug422053://mebukuapp-host/message-all"}};
             PortalAPP.Launch(param);
         }
 
@@ -40,7 +41,7 @@
 
 <button onclick="getAccessToken()">GetAccessToken</button>
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button>
-<button onclick="portalAppViewLaunch('{\"PortalAppLink\":{\"CustomerURL\":\"mebukug422053://mebukuapp-host/message-all\"}}')">ホーム画面</button>
+<button onclick="portalAppViewLaunch()">ホーム画面に遷移</button>
 
 </body>
 </html>
