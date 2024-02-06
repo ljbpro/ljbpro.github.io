@@ -14,6 +14,14 @@
             PortalAPP.GetPersonalBasicInfo("TESTAPP001-0001","大村市アプリ");
         }
 
+        function getPersonalBasicInfo400_1(){
+            PortalAPP.GetPersonalBasicInfo("","大村市アプリ");
+        }
+
+        function getPersonalBasicInfo400_2(){
+            PortalAPP.GetPersonalBasicInfo("TESTAPP001-0001","");
+        }
+
         function portalAppGetPersonalBasicInfoCallBack(result){
             alert(result);
         }
@@ -56,6 +64,8 @@
 
 <button onclick="getAccessToken()">GetAccessToken</button>
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button>
+<button onclick="getPersonalBasicInfo400_1()">getPersonalBasicInfo400_1</button>
+<button onclick="getPersonalBasicInfo400_2()">getPersonalBasicInfo400_2</button>
 <button onclick="portalAppViewLaunch(11)">別のアプリ（Instagram）</button>
 <button onclick="portalAppViewLaunch(12)">グッドグロウまえばし</button>
 <button onclick="portalAppViewLaunch(21)">ホーム画面</button>
