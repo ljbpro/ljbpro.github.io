@@ -46,9 +46,12 @@
                 param = {"PortalAppLink":{"CustomerURL":"mebukuapp://mebukuapp-host/home"}};
             }
             else if(kbn === 31){
-                param = {"WebViewLink":{"URL":"https://kyojo-connect.com/passport","Title":"テスト画面","ServiceCode":"testservice01","UseCamera":true,"Engine":"WebView","Method":"Get","Header":{"MebukuID":[{"Key":"Authorization","Value":"Bearer%AccessToken%"},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}],"MebukuIDTemp":[{"Key":"Authorization","Value":""},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}]},"Param":{"MebukuID":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"mail","Value":"%Mail%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"},{"Key":"client_id","Value":"%CLIENT_ID%"}],"MebukuIDTemp":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"}]}}};
+                param = {"WebViewLink":{"URL":"https://kyojo-connect.com/passport","Title":"テスト画面1","ServiceCode":"testservice01","UseCamera":true,"Engine":"WebView","Method":"Get","Header":{"MebukuID":[{"Key":"Authorization","Value":"Bearer%AccessToken%"},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}],"MebukuIDTemp":[{"Key":"Authorization","Value":""},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}]},"Param":{"MebukuID":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"mail","Value":"%Mail%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"},{"Key":"client_id","Value":"%CLIENT_ID%"}],"MebukuIDTemp":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"}]}}};
             }
             else if(kbn === 32){
+                param = {"WebViewLink":{"URL":"https://kyojo-connect.com/passport","Title":"テスト画面2","ServiceCode":"testservice02","UseCamera":true,"Engine":"WebView","Method":"Get","Header":{"MebukuID":[{"Key":"Authorization","Value":"Bearer%AccessToken%"},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}],"MebukuIDTemp":[{"Key":"Authorization","Value":""},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}]},"Param":{"MebukuID":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"mail","Value":"%Mail%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"},{"Key":"client_id","Value":"%CLIENT_ID%"}],"MebukuIDTemp":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"}]}}};
+            }
+            else if(kbn === 33){
                 param = {"WebViewLink":{"URL":"https://kyojo-connect.com/passport","Title":"パスポート画面","ServiceCode":"TestService01","UseCamera":true,"Engine":"Browser","Method":"Get","Header":{"MebukuID":[{"Key":"Authorization","Value":"Bearer%AccessToken%"},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}],"MebukuIDTemp":[{"Key":"Authorization","Value":""},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}]},"Param":{"MebukuID":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"mail","Value":"%Mail%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"},{"Key":"client_id","Value":"%CLIENT_ID%"}],"MebukuIDTemp":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"}]}}};
             }
             PortalAPP.Launch(param);
@@ -69,8 +72,9 @@
 <button onclick="portalAppViewLaunch(11)">別のアプリ（Instagram）</button>
 <button onclick="portalAppViewLaunch(12)">グッドグロウまえばし</button>
 <button onclick="portalAppViewLaunch(21)">ホーム画面</button>
-<button onclick="portalAppViewLaunch(31)">カメラ利用ありWebView画面</button>
-<button onclick="portalAppViewLaunch(32)">Browser画面</button>
+<button onclick="portalAppViewLaunch(31)">カメラ利用ありWebView画面(testservice01)</button>
+<button onclick="portalAppViewLaunch(32)">カメラ利用ありWebView画面(testservice02)</button>
+<button onclick="portalAppViewLaunch(33)">Browser画面</button>
 
 <a href="mebukuapp://mebukuapp-host/home">mebukuapp://mebukuapp-host/home</a>
 
