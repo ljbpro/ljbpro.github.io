@@ -27,11 +27,14 @@
         }
 
         function mkTurnOffCamera(){
-            alert("mkTurnOffCamera Function Called");
+            document.getElementById('alertmessage').value='mkTurnOffCamera Function Called';
+            //alert("mkTurnOffCamera Function Called");
         }
 
         function mkTurnOnCamera(){
-            alert("mkTurnOnCamera Function Called");
+            document.getElementById('alertmessage').value='mkTurnOnCamera Function Called';
+            //document.getElementById('Id').value='new value';
+            //alert("mkTurnOnCamera Function Called");
         }
 
         function portalAppViewLaunch(kbn){
@@ -66,7 +69,7 @@
     </script>
 </head>
 <body>
-<h1>TEST</h1>
+<h1 id="alertmessage">TEST</h1>
 
 <button onclick="getAccessToken()">GetAccessToken</button>
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button>
