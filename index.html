@@ -27,16 +27,19 @@
         }
 
         function mkTurnOffCamera(){
-            document.getElementById('alertmessage1').innerHTML='';
-            document.getElementById('alertmessage2').innerHTML='mkTurnOffCamera Function Called';
+            document.getElementById('alertmessage1').innerHTML='mkTurnOffCamera Function Called';
             //alert("mkTurnOffCamera Function Called");
         }
 
         function mkTurnOnCamera(){
-            document.getElementById('alertmessage1').innerHTML='mkTurnOnCamera Function Called';
-            document.getElementById('alertmessage2').innerHTML='';
+            document.getElementById('alertmessage2').innerHTML='mkTurnOnCamera Function Called';
             //document.getElementById('Id').value='new value';
             //alert("mkTurnOnCamera Function Called");
+        }
+
+        function clearAlertMessage(){
+            document.getElementById('alertmessage1').innerHTML='CLEAR';
+            document.getElementById('alertmessage2').innerHTML='CLEAR';
         }
 
         function portalAppViewLaunch(kbn){
@@ -75,6 +78,7 @@
 <h1 id="alertmessage1">ALERTMESSAGE01</h1>
 <h1 id="alertmessage2">ALERTMESSAGE02</h1>
 
+<button onclick="clearAlertMessage()">ClearAlertMessage</button>
 <button onclick="getAccessToken()">GetAccessToken</button>
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button>
 <button onclick="getPersonalBasicInfo400_1()">getPersonalBasicInfo400_1</button>
