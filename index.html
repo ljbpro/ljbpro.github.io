@@ -27,12 +27,14 @@
         }
 
         function mkTurnOffCamera(){
-            //document.getElementById('alertmessage').innerHTML='mkTurnOffCamera Function Called';
-            alert("mkTurnOffCamera Function Called");
+            document.getElementById('alertmessage1').innerHTML='';
+            document.getElementById('alertmessage2').innerHTML='mkTurnOffCamera Function Called';
+            //alert("mkTurnOffCamera Function Called");
         }
 
         function mkTurnOnCamera(){
-            document.getElementById('alertmessage').innerHTML='mkTurnOnCamera Function Called';
+            document.getElementById('alertmessage1').innerHTML='mkTurnOnCamera Function Called';
+            document.getElementById('alertmessage2').innerHTML='';
             //document.getElementById('Id').value='new value';
             //alert("mkTurnOnCamera Function Called");
         }
@@ -69,7 +71,8 @@
     </script>
 </head>
 <body>
-<h1 id="alertmessage">TEST</h1>
+<h1 id="alertmessage1"></h1>
+<h1 id="alertmessage2"></h1>
 
 <button onclick="getAccessToken()">GetAccessToken</button>
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button>
