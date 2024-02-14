@@ -77,8 +77,9 @@
         }
 
         function portalAppUploadImageCallBack(result){
+            alert(result);
             let img_element = document.querySelector("img");
-            img_element.src = "data:image/png;base64," + result;
+            img_element.src = "data:image/png;base64," + result.image_data;
         }
     </script>
 </head>
