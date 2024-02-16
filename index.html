@@ -80,7 +80,7 @@
             alert(result);
             let img_element = document.querySelector("img");
             var object = JSON.parse(result);
-            img_element.src = "data:image/png;base64," + object.image_data;
+            img_element.src = object.image_data;
         }
     </script>
 </head>
