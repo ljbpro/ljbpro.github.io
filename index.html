@@ -59,7 +59,7 @@
                 }
             }
 
-            alert(cameraSetting);
+            alert(cameraSetting.toString());
 
             navigator.mediaDevices.getUserMedia(cameraSetting)
                 .then((mediaStream) => {
