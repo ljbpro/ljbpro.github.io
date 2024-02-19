@@ -66,6 +66,7 @@
                     video.srcObject = mediaStream;
                 })
                 .catch((err) => {
+                    alert(err.toString());
                     console.log(err.toString());
                 });
         }
