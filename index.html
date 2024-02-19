@@ -26,6 +26,7 @@
             alert(result);
         }
 
+        /*
         function mkTurnOffCamera(){
             document.getElementById('alertmessage1').innerHTML='mkTurnOffCamera Function Called';
             //alert("mkTurnOffCamera Function Called");
@@ -35,6 +36,47 @@
             document.getElementById('alertmessage2').innerHTML='mkTurnOnCamera Function Called';
             //document.getElementById('Id').value='new value';
             //alert("mkTurnOnCamera Function Called");
+        }
+
+         */
+        const cameraWidth = 300;
+        const cameraHeight = 400;
+        /* カメラ起動 */
+        function mkTurnOnCamera(){
+            alert("カメラ起動");
+            const video = document.getElementById("camera");
+
+            //スマホからの閲覧か
+            const isMobile = navigator.userAgent.match(/iPhone|Android/);
+
+            const cameraSetting = {
+                audio: false,
+                video: {
+                    //スマホの場合は縦横を逆に設定する
+                    width: isMobile ? cameraHeight : cameraWidth,
+                    height: isMobile ? cameraWidth : cameraHeight,
+                    facingMode: "environment",
+                }
+            }
+
+            navigator.mediaDevices.getUserMedia(cameraSetting)
+                .then((mediaStream) => {
+                    video.srcObject = mediaStream;
+                })
+                .catch((err) => {
+                    console.log(err.toString());
+                });
+        }
+
+        /* カメラ停止 */
+        function mkTurnOffCamera(){
+            const video = document.getElementById("camera");
+            const tracks = video.srcObject.getTracks();
+            tracks.forEach(track =>{
+                track.stop();
+            });
+            video.srcObject = null;
+
         }
 
         function clearAlertMessage(){
@@ -95,7 +137,7 @@
 <button onclick="getPersonalBasicInfo400_1()">getPersonalBasicInfo400_1</button><br>
 <button onclick="getPersonalBasicInfo400_2()">getPersonalBasicInfo400_2</button><br>
 <button onclick="portalAppViewLaunch(11)">別のアプリ（Instagram）</button><br>
-<button onclick="portalAppViewLaunch(12)">グッドグロウまえばし</button><br>
+<button onclick="portalAppViewLaunch(12)">グッドグロウまえばsyouし</button><br>
 <button onclick="portalAppViewLaunch(21)">ホーム画面</button><br>
 <button onclick="portalAppViewLaunch(31)">カメラ利用ありWebView画面(testservice01)</button><br>
 <button onclick="portalAppViewLaunch(32)">カメラ利用ありWebView画面(testservice02)</button><br>
@@ -107,6 +149,11 @@
 <button onclick="portalAppImageUpload()">画像アップロード</button><br>
 
 <img src="" alt="Image">
+
+<button onclick="mkTurnOnCamera()" style="margin-left:15px">カメラ起動</button><br>
+<button onclick="mkTurnOffCamera()" style="margin-left:15px">カメラ停止</button><br>
+
+<video id="camera" autoplay muted playsinline></video>
 
 </body>
 </html>
