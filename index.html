@@ -49,8 +49,6 @@
             //スマホからの閲覧か
             const isMobile = navigator.userAgent.match(/iPhone|Android/);
 
-            alert(isMobile);
-
             const cameraSetting = {
                 audio: false,
                 video: {
@@ -60,6 +58,8 @@
                     facingMode: "environment",
                 }
             }
+
+            alert(cameraSetting);
 
             navigator.mediaDevices.getUserMedia(cameraSetting)
                 .then((mediaStream) => {
