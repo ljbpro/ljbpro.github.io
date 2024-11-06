@@ -2,6 +2,10 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
     <script>
+        function ReLogin(){
+            PortalAPP.ReLogin();
+        }
+
         function getAccessToken(){
             PortalAPP.GetAccessToken();
         }
@@ -135,6 +139,7 @@
 <h1 id="alertmessage2">MESSAGE02</h1>
 
 <button onclick="clearAlertMessage()">ClearAlertMessage</button><br>
+<button onclick="ReLogin()">ReLogin</button><br>
 <button onclick="getAccessToken()">GetAccessToken</button><br>
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button><br>
 <button onclick="getPersonalBasicInfo400_1()">getPersonalBasicInfo400_1</button><br>
