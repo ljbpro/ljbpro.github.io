@@ -30,8 +30,12 @@
             alert(result);
         }
 
-        function fposSignature(){
+        function fposSignature_1(){
             PortalAPP.FPoSSignature("T000000001","1.0","{\"Test\":\"TEST\"}","1");
+        }
+
+        function fposSignature_2(){
+            PortalAPP.FPoSSignature("T000000003","1.0","{\"ServiceCode\":\"B0000000-APP004\", \"ClientID\":\"CL002\", \"AppName\":\"かどまアプリ\"}","2");
         }
 
         function fposSignature400_1(){
@@ -173,7 +177,8 @@
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button><br>
 <button onclick="getPersonalBasicInfo400_1()">getPersonalBasicInfo400_1</button><br>
 <button onclick="getPersonalBasicInfo400_2()">getPersonalBasicInfo400_2</button><br>
-<button onclick="fposSignature()">FPoSSignature</button><br>
+<button onclick="fposSignature_1()">fposSignature_1</button><br>
+<button onclick="fposSignature_2()">fposSignature_2</button><br>
 <button onclick="fposSignature400_1()">fposSignature400_1</button><br>
 <button onclick="fposSignature400_2()">fposSignature400_2</button><br>
 <button onclick="fposSignature400_3()">fposSignature400_3</button><br>
