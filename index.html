@@ -30,6 +30,35 @@
             alert(result);
         }
 
+        function fposSignature(){
+            PortalAPP.FPoSSignature("T000000001","1.0","{\"Test\":\"TEST\"}","1");
+        }
+
+        function fposSignature400_1(){
+            PortalAPP.FPoSSignature("","1.0","{\"Test\":\"TEST\"}","1");
+        }
+
+        function fposSignature400_2(){
+            PortalAPP.FPoSSignature("T000000001","","{\"Test\":\"TEST\"}","1");
+        }
+
+        function fposSignature400_3(){
+            PortalAPP.FPoSSignature("T000000001","1.0","","1");
+        }
+
+        function fposSignature400_4(){
+            PortalAPP.FPoSSignature("T000000001","1.0","{\"Test\":\"TEST\"}","");
+        }
+
+        function fposSignature400_5(){
+            PortalAPP.FPoSSignature("T000000001","1.0","{\"Test\":\"TEST\"}","3");
+        }
+
+        function portalAppFPoSSignatureCallBack(result){
+            alert(result);
+        }
+
+
         /*
         function mkTurnOffCamera(){
             document.getElementById('alertmessage1').innerHTML='mkTurnOffCamera Function Called';
@@ -144,6 +173,12 @@
 <button onclick="getPersonalBasicInfo()">GetPersonalBasicInfo</button><br>
 <button onclick="getPersonalBasicInfo400_1()">getPersonalBasicInfo400_1</button><br>
 <button onclick="getPersonalBasicInfo400_2()">getPersonalBasicInfo400_2</button><br>
+<button onclick="fposSignature()">FPoSSignature</button><br>
+<button onclick="fposSignature400_1()">fposSignature400_1</button><br>
+<button onclick="fposSignature400_2()">fposSignature400_2</button><br>
+<button onclick="fposSignature400_3()">fposSignature400_3</button><br>
+<button onclick="fposSignature400_4()">fposSignature400_4</button><br>
+<button onclick="fposSignature400_5()">fposSignature400_5</button><br>
 <button onclick="portalAppViewLaunch(11)">別のアプリ（Instagram）</button><br>
 <button onclick="portalAppViewLaunch(12)">グッドグロウまえばsyouし</button><br>
 <button onclick="portalAppViewLaunch(21)">ホーム画面</button><br>
