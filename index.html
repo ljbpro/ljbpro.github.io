@@ -182,6 +182,14 @@
             var object = JSON.parse(result);
             img_element.src = object.image_data;
         }
+
+        function portalAppFileUpload(){
+            PortalAPP.UploadFile();
+        }
+
+        function portalAppUploadFileCallBack(result){
+            alert(result);
+        }
     </script>
 </head>
 <body>
@@ -220,6 +228,8 @@
 <a href="mebukuapp://mebukuapp-host/home">mebukuapp://mebukuapp-host/home</a><br>
 
 <button onclick="portalAppImageUpload()">画像アップロード</button><br>
+
+<button onclick="portalAppFileUpload()">ファイルアップロード</button><br>
 
 <img src="" alt="Image">
 
