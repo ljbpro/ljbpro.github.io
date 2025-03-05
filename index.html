@@ -183,8 +183,17 @@
             img_element.src = object.image_data;
         }
 
+
         function portalAppFileUpload(){
             PortalAPP.UploadFile();
+        }
+
+        function portalAppFileUpload1(){
+            PortalAPP.UploadFile("pdf");
+        }
+
+        function portalAppFileUpload2(){
+            PortalAPP.UploadFile("doc,excel,ppt,zip");
         }
 
         function portalAppUploadFileCallBack(result){
@@ -230,6 +239,10 @@
 <button onclick="portalAppImageUpload()">画像アップロード</button><br>
 
 <button onclick="portalAppFileUpload()">ファイルアップロード</button><br>
+
+<button onclick="portalAppFileUpload1()">ファイルアップロード(pdf)</button><br>
+
+<button onclick="portalAppFileUpload2()">ファイルアップロード(doc,excel,ppt,zip)</button><br>
 
 <img src="" alt="Image">
 
