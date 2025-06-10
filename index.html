@@ -199,6 +199,18 @@
         function portalAppUploadFileCallBack(result){
             alert(result);
         }
+
+        document.getElementById("cameraInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById("preview").src = e.target.result; // 显示拍照图像
+                    console.log("base64:", e.target.result);
+                };
+                reader.readAsDataURL(file); // 转为 base64
+            }
+        });
     </script>
 </head>
 <body>
@@ -248,6 +260,9 @@
 
 <button onclick="mkTurnOnCamera()" style="margin-left:15px">カメラ起動</button><br>
 <button onclick="mkTurnOffCamera()" style="margin-left:15px">カメラ停止</button><br>
+
+<input type="file" accept="image/*" capture="environment" id="cameraInput">
+<img id="preview" src="">
 
 <video id="camera" autoplay muted playsinline></video>
 
