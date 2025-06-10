@@ -205,7 +205,20 @@
             if (file) {
                 const reader = new FileReader();
                 reader.onload = function(e) {
-                    document.getElementById("preview").src = e.target.result; // 显示拍照图像
+                    document.getElementById("preview").src = e.target.result;
+                    alert(e.target.result);
+                    console.log("base64:", e.target.result);
+                };
+                reader.readAsDataURL(file); // 转为 base64
+            }
+        });
+
+        document.getElementById("fileInput").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    alert(e.target.result);
                     console.log("base64:", e.target.result);
                 };
                 reader.readAsDataURL(file); // 转为 base64
@@ -261,8 +274,10 @@
 <button onclick="mkTurnOnCamera()" style="margin-left:15px">カメラ起動</button><br>
 <button onclick="mkTurnOffCamera()" style="margin-left:15px">カメラ停止</button><br>
 
-<input type="file" accept="image/*" capture="environment" id="cameraInput" name="FileSelect">
+<span>画像ファイル選択：</span><input type="file" accept="image/*" id="cameraInput">
 <img id="preview" src="">
+
+<span>ファイル選択：</span><input type="file" id="fileInput">
 
 <video id="camera" autoplay muted playsinline></video>
 
