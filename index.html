@@ -147,6 +147,9 @@
             else if(kbn === 34){
                 param = {"WebViewLink":{"URL":"https://kyojo-connect.com/passport","Title":"パスポート画面","ServiceCode":"TestService01","UseCamera":true,"Engine":"Browser","Method":"Get","Header":{"MebukuID":[{"Key":"Authorization","Value":"Bearer%AccessToken%"},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}],"MebukuIDTemp":[{"Key":"Authorization","Value":""},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}]},"Param":{"MebukuID":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"mail","Value":"%Mail%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"},{"Key":"client_id","Value":"%CLIENT_ID%"}],"MebukuIDTemp":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"}]}}};
             }
+            else if(kbn === 35){
+                param = {"WebViewLink":{"URL":"https://www.google.com/","Title":"テスト画面3","ServiceCode":"testservice04","UseCamera":true,"Engine":"WebView","Method":"Get","Header":{"MebukuID":[{"Key":"Authorization","Value":"Bearer%AccessToken%"},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}],"MebukuIDTemp":[{"Key":"Authorization","Value":""},{"Key":"Content-Type","Value":"application/x-www-form-urlencoded"}]},"Param":{"MebukuID":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"mail","Value":"%Mail%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"},{"Key":"client_id","Value":"%CLIENT_ID%"}],"MebukuIDTemp":[{"Key":"id_kind","Value":"%ID_KBN%"},{"Key":"id","Value":"%ID%"},{"Key":"nickname","Value":"%NICK_NAME%"},{"Key":"image","Value":"%IMAGE%"},{"Key":"version","Value":"%VERSION%"}]}}};
+            }
             else if(kbn === 51){
                 param = {"PortalAppLink":{"CustomerURL":"mebukug102016://mebukuapp-host/wallet-transactions"}};
             }
@@ -253,6 +256,7 @@
 <button onclick="portalAppViewLaunch(32)">カメラ利用ありWebView画面(testservice02)</button><br>
 <button onclick="portalAppViewLaunch(33)">カメラ利用ありWebView画面(testservice03)</button><br>
 <button onclick="portalAppViewLaunch(34)">Browser画面</button><br>
+<button onclick="portalAppViewLaunch(35)">WebView(Google)</button><br>
 
 <button onclick="portalAppViewLaunch(51)">チャージ＆取引履歴画面</button><br>
 <button onclick="portalAppViewLaunch(52)">マイお知らせ画面</button><br>
